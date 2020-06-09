@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Normally school is a toublesome thing</title>
+        <meta name="descrpiton" content="Poem Project - Jackson Mergendahl">
+        <meta name="veiwport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <style>
+            *{
+                font-family: 'Chelsea Market', cursive;
+            }
+			body, html {
+			  height: 100%;
+			}
+			.bg{
+				/* Full height */
+				height: 100%;
+				width:100%;
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.slide {
+				display:none;
+			}
+			.video {
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				overflow: hidden;
+			}
+        </style>
+    </head>
+    <body>
+		
+		<section class="slide bg" style="background-image: url('images/school.jpg');">
+			<audio controls class="w3-display-middle">
+				<source src="audio/song.mp3" type="audio/mpeg">
+			</audio>
+			<div class="w3-container w3-orange w3-top animate__animated animate__fadeInRight" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">Normally school is a troublesome thing.</h1>
+			</div>
+			<div class="w3-container w3-orange w3-bottom animate__animated animate__fadeInLeft animate__delay-2s" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">Although I hate to admit it...</h1>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="w3-container w3-green w3-top animate__animated animate__fadeInDown" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">All the social interactions that I’m missing</h1>
+			</div>
+			<video autoplay muted loop class="video">
+				<source src="video/friends.mp4" type="video/mp4">
+			</video>
+			<div class="w3-container w3-green w3-bottom animate__animated animate__fadeInUp animate__delay-2s" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">School is where I would fit it</h1>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="w3-container w3-blue w3-top animate__animated animate__rotateInDownLeft" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">I'd do the homework from beginning to end</h1>
+			</div>
+			<video autoplay muted loop class="video">
+				<source src="video/homework.mp4" type="video/mp4">
+			</video>
+			<div class="w3-container w3-blue w3-bottom animate__animated animate__rotateInUpRight animate__delay-2s" style="height:20%">
+				<h1 class="w3-xxlarge w3-mobile w3-display-middle">If it meant I could just see my friends</h1>
+			</div>
+		</section>
+		
+		<button class="w3-button w3-xxlarge w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-xxlarge w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("slide");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+		</script>
+    </body>
+</html>
